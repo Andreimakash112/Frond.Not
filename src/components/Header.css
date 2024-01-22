@@ -3,7 +3,7 @@
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .Header li {
     width:140px ;
@@ -11,7 +11,7 @@
     list-style: none;
     line-height: 50px;
     cursor: pointer;
-    border-radius: 5px;
+border-radius: 5px;
 }
 .Header li:hover {
     background-color: #0b487e;

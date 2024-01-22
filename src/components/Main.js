@@ -5,6 +5,11 @@ function Main() {
   return (
     <div className="Main">
      <Product /> 
+     <Product />
+     <Product />
+     <Product />
+     <Product />
+     <Product />
     </div>
   );
 }

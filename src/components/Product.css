@@ -1,5 +1,6 @@
 .Product{
     width: 250px;
-    height: 400px;
+    height: 360px;
     box-shadow: 0px 0px 5px 5px #dfdfdfdf;
+    margin: auto;
 }

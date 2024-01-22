@@ -1,6 +1,6 @@
 
 import './Main.css';
-import Product from './Product';
+import Product from '../components/Product';
 function Main() {
   return (
     <div className="Main">

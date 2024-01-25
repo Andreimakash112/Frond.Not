@@ -2,10 +2,13 @@ import React from 'react';
 import './Header.css';
 
 function Header({setPage}) {
+  function changePage(){
+    setPage('Basket')
+  }
   return (
     <div className="Header">
       <ul>
-        <li>корзина</li>
+        <li onClick={changePage}>корзина</li>
       </ul>
     </div>
   );

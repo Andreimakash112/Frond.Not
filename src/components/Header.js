@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-function Header() {
+function Header({setPage}) {
   return (
     <div className="Header">
       <ul>

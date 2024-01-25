@@ -1,5 +1,5 @@
+import React from 'react';
 import './Basket.css';
-
 function Basket() {
   return (
     <div className="Basket">

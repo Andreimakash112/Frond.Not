@@ -5,6 +5,11 @@
     display: flex;
     justify-content: flex-end;
 }
+.Header ul{
+    
+    display: flex;
+   
+}
 .Header li {
     width:140px ;
     height:100% ;

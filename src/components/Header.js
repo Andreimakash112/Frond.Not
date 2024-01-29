@@ -8,6 +8,7 @@ function Header({setPage}) {
   return (
     <div className="Header">
       <ul>
+        <li onClick={()=>setPage('Main')}>Главная</li>
         <li onClick={changePage}>корзина</li>
       </ul>
     </div>

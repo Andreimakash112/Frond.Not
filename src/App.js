@@ -17,8 +17,8 @@ function App() {
 
   const modalBoxes = {
     none: null,
-    login: <ModalBox></ModalBox>,
-    registration:<ModalBox></ModalBox>
+    login: <ModalBox setModalBox={setModalBox}></ModalBox>,
+    registration: <ModalBox setModalBox={setModalBox}></ModalBox>
   }
   return (
     <div className="App">

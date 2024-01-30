@@ -1,11 +1,11 @@
 import React from 'react';
 import './UserBox.css';
 
-function UserBox() {
+function UserBox({setModalBox}) {
   return (
     <div className="UserBox">
-        <button>Вход</button>
-      <button>Регистрация</button>
+        <button onClick={() =>setModalBox('login')}>Вход</button>
+      <button onClick={() =>setModalBox('registration')}>Регистрация</button>
     </div>
   );
 }

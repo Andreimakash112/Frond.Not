@@ -8,18 +8,23 @@ import ModalBox from './components/ModalBox';
 function App() {
 
   const[page, setPage] = useState('Main')
-
+  const[modalBox, setModalBox] = useState('none')
   const pages = {
     Main: <Main />,
     Basket: <Basket />
 
   }
 
+  const modalBoxes = {
+    none: null,
+    login: <ModalBox></ModalBox>,
+    registration:<ModalBox></ModalBox>
+  }
   return (
     <div className="App">
-     <Header setPage={setPage} />
+     <Header setPage={setPage} setModalBox={setModalBox} />
      { pages[page] }
-     <ModalBox />
+     { modalBoxes[modalBox] }
      <Footer />
     </div>
   );

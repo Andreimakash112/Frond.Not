@@ -4,14 +4,14 @@ import './ModalBox.css';
 function ModalBox() {
   return (
 <>
-    <div className="ModalBox">
-       
-      
-    </div>
     <div className="echo">
-       
-      
     </div>
+    <div className="ModalBox">
+
+
+        
+    </div>
+    
 </>
   );
 }

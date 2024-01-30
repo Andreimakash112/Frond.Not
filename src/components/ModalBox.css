@@ -1,8 +1,10 @@
 .ModalBox {
-    width: 500px;
+    width: 400px;
     height: auto;
     min-height:150px ;
-    display: flex;
-    align-items: center;
+    position: absolute;
     border-radius: 10px;
+    background-color: rgb(250, 250, 250);
+    top: 20%;
+    left:calc( 50% - 200px) ;
 }

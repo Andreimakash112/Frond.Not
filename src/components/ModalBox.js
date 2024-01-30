@@ -3,10 +3,16 @@ import './ModalBox.css';
 
 function ModalBox() {
   return (
+<>
     <div className="ModalBox">
-        <button>Вход</button>
+       
       
     </div>
+    <div className="echo">
+       
+      
+    </div>
+</>
   );
 }
 

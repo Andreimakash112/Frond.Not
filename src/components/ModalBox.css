@@ -1,0 +1,8 @@
+.ModalBox {
+    width: 500px;
+    height: auto;
+    min-height:150px ;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}

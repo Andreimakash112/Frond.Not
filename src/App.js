@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Main from './views/Main';
 import Footer from './components/Footer';
 import Basket from './views/Basket';
+import ModalBox from './components/ModalBox';
 function App() {
 
   const[page, setPage] = useState('Main')
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
      <Header setPage={setPage} />
      { pages[page] }
+     <ModalBox />
      <Footer />
     </div>
   );

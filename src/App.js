@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Basket from './views/Basket';
 import ModalBox from './components/ModalBox';
 import Login from './components/Login';
+import Registration from './components/Registration';
 function App() {
 
   const[page, setPage] = useState('Main')
@@ -19,7 +20,7 @@ function App() {
   const modalBoxes = {
     none: null,
     login: <ModalBox setModalBox={setModalBox}><Login /></ModalBox>,
-    registration: <ModalBox setModalBox={setModalBox}></ModalBox>
+    Registration: <ModalBox setModalBox={setModalBox}><Registration /></ModalBox>
   }
   return (
     <div className="App">

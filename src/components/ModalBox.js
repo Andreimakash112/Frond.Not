@@ -8,7 +8,7 @@ function ModalBox({setModalBox, children}) {
     </div>
     <div className="ModalBox">
 
-      { children}
+      {children}
 
     </div>
     

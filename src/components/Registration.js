@@ -1,16 +1,16 @@
 import React from 'react';
 
 
-function Login() {
+function Registration() {
 
   return ( 
     <>
-      <h1>Авторизация</h1>
+      <h1>Регистрация</h1>
        <input id='login' placeholder='введите логин' />
        <input id='password' placeholder='введите пароль' />
-       <button>войти</button>
+       <button>Сохранить</button>
     </>
   );
 }
 
-export default Login;
+export default Registration;

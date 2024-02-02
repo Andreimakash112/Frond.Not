@@ -35,14 +35,14 @@
     width:100% ;
     height:30px ;
     margin-bottom: 10px;
-    
+    text-align: center;
  }  
  .ModalBox button { 
     width:50% ;
     height:30px ;
     margin-bottom: 10px;
     cursor: pointer;
-    
+    background-color: #aad7ff;
     border-radius: 5px;
     border: none;
  }

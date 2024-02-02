@@ -3,6 +3,14 @@ import React from 'react';
 
 function Login() {
 
+ function Log() {
+    const login = document.getElementById('login').value
+    const password = document.getElementById('password').value
+    const data = {
+        login:login,
+        password:password
+    }
+ }
   return ( 
     <>
       <h1>Авторизация</h1>

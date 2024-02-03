@@ -2,6 +2,18 @@ import React from 'react';
 
 
 function Registration() {
+  function Reg() {
+    const login = document.getElementById('login').value
+    const password = document.getElementById('password').value
+    const email = document.getElementById('email').value
+    const data = {
+        login:login,
+        password:password,
+        email:email
+    }
+    debugger
+    console.Reg(data) 
+ }
 
   return ( 
     <>
@@ -9,7 +21,7 @@ function Registration() {
        <input id='Login' type='text' placeholder='Придумайте логин' />
        <input id='password' type='password' placeholder='Придумайте пароль' />
        <input id='email' type='email' placeholder='Ваша почта' />
-       <button>Сохранить</button>
+       <button onClick={Reg}>Сохранить</button>
     </>
   );
 }

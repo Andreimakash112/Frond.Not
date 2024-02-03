@@ -20,7 +20,7 @@ function Registration() {
       <h1>Регистрация</h1>
        <input id='login' type='text' placeholder='Придумайте логин' />
        <input id='password' type='password' placeholder='Придумайте пароль' />
-       <input id='email' type='email' placeholder='Почта' />
+       <input  id='email' type='email' placeholder='Почта' />
        <button onClick={Reg}>Сохранить</button>
     </>
   );

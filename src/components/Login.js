@@ -10,7 +10,7 @@ function Login() {
         login:login,
         password:password
     }
-    debugger
+    
     console.log(data) 
  }
   return ( 

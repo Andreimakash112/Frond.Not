@@ -1,12 +1,12 @@
 import React from 'react';
 import './Product.css';
 
-function Product({image}) {
+function Product({header,image,price}) {
   return (
     <div className="Product">
       <img src = {image}/>
-      <h1>Товар</h1>
-      <p>{ `${120} руб` }</p>
+      <h1>{header}</h1>
+      <p>{ `${price} руб` }</p>
       <button> В корзину </button>
     </div>
   );

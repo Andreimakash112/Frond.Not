@@ -7,6 +7,7 @@ import image_3 from '../images/03.jpg'
 import image_4 from '../images/04.jpg'
 import image_5 from '../images/05.jpg'
 import image_6 from '../images/06.jpg'
+
 function Main() { 
 
   const products = [

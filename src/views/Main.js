@@ -5,12 +5,12 @@ import image from '../images/01.jpg'
 function Main() {
   return (
     <div className="Main">
-     <Product /> 
-     <Product />
-     <Product />
-     <Product />
-     <Product />
-     <Product />
+     <Product image = {image} /> 
+     <Product image = {image} />
+     <Product image = {image} />
+     <Product image = {image} />
+     <Product image = {image} />
+     <Product image = {image} />
     </div>
   );
 }

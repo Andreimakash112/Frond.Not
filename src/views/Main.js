@@ -16,19 +16,14 @@ function Main() {
 ]
 function getProductList() {
 
-  return products.forEach((item) => <Product header = {item.header} image = {item.image} price = {item.price} />   )
+  return products.map((item) => <Product header = {item.header} image = {item.image} price = {item.price} />   )
 
 }
 
 
   return (
     <div className="Main">
-     <Product image = {image} /> 
-     <Product image = {image} />
-     <Product image = {image} />
-     <Product image = {image} />
-     <Product image = {image} />
-     <Product image = {image} />
+   {getProductList() }
     </div>
   );
 }

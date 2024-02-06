@@ -28,7 +28,6 @@ function getProductList() {
 
 }
 
-
   return (
     <div className="Main">
    {getProductList() }

@@ -9,6 +9,31 @@ const Products = [
     image: image,
     price: 120
   },
+  {
+    header: 'Товар 1',
+    image: image,
+    price: 120
+  },
+  {
+    header: 'Товар 1',
+    image: image,
+    price: 120
+  },
+  {
+    header: 'Товар 1',
+    image: image,
+    price: 120
+  },
+  {
+    header: 'Товар 1',
+    image: image,
+    price: 120
+  },
+  {
+    header: 'Товар 1',
+    image: image,
+    price: 120
+  }
 ]
 
 

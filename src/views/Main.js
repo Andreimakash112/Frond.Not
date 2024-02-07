@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import './Main.css';
 import Product from '../components/Product';
-import image  from '../images/01.jpg'/*
+/*import image  from '../images/01.jpg'
 import image_2 from '../images/02.jpg'
 import image_3 from '../images/03.jpg'
 import image_4 from '../images/04.jpg'

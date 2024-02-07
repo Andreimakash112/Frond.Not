@@ -12,7 +12,7 @@ function Login() {
     }
     
     console.log(data) 
-    const api = 'http://127.0.0.1:9001/registration'
+    const api = 'http://127.0.0.1:9001/login'
 
     fetch(api, {
       method: 'POST',

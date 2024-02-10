@@ -24,7 +24,7 @@ function Login() {
     .then(result => result.json())
     .then((result) => {
       console.log(result)
-      localStorage.setItem('token'.result.token)//сохраняем токен
+      localStorage.setItem('token',result.token) //сохранить в localStorage
     })
  }
   return ( 

@@ -28,7 +28,7 @@ function Main() {
 
   return (
     <div className="Main">
-   {products.map((item) => <Product key = {item.id} header = {item.header} image = {item.image} price = {item.price} />   ) }
+   {products.map((item) => <Product key = {item._id} header = {item.header} image = {item.image} price = {item.price} />   ) }
     </div>
   );
 }

@@ -9,7 +9,7 @@ import image_5 from '../images/05.jpg'
 import image_6 from '../images/06.jpg'
 import image_7 from '../images/07.jpg'*/
 
-function Main() { 
+function Main({setBasket, setBasketPrice, setBasketQty, basket, setMessage, setModalBox, token,setProductData}) { 
   const[products, setProducts] = useState([])
  
   useEffect(() => {
@@ -28,9 +28,26 @@ function Main() {
 
   return (
     <div className="Main">
-   {products.map((item) => <Product key = {item._id} header = {item.header} image = {item.image} price = {item.price} />   ) }
+  
+
+
+  
+      {products.map((item) => <Product key={item._id} id={item._id} image={item.image}
+        header={item.header} price={item.price} setBasket={setBasket}
+        setBasketPrice={setBasketPrice} setBasketQty={setBasketQty}
+      basket={basket} setMessage={setMessage} setModalBox={setModalBox} token={token}setProductData={setProductData}   />)}
+      
+
+
+
+      
     </div>
   );
+
+
+
+
+
 }
 
 export default Main;

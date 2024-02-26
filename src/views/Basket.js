@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Basket.css';
-import ProductUser from '../components/ProductUser';
-import { jwtDecode } from 'jwt-decode'; // Импортируйте jwtDecode напрямую
-
-
-function Basket() {
-  const [id, setEmail] = useState('');
+import ProductBasket from '../components/ProductBasket';
+import { jwtDecode } from 'jwt-decode'; 
+function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, setBasketQty, setModalBox }) {//
+ 
   const [login, setLogin] = useState('');
-  
+
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
       const decodedToken = jwtDecode(token);
-      setEmail(decodedToken.id);
+      
       setLogin(decodedToken.login);
       console.log('Декодированный токен:', decodedToken);
     }
@@ -28,36 +26,46 @@ function Basket() {
     }
   }
 
- /* function logLoginToConsole() {
-    console.log('Логин:', login);
-  }*/
-  
+
+
+
+
+  function ShowOrderButton() {
+    if (basketQty > 0) {
+      return (<><button className="order" onClick={() => setModalBox('OrderBox')}>Оформить заказ</button></>)
+    }
+  }
+
   return (
     <div className="Basket">
-      <h1>КОРЗИНА</h1>
-      <h2>Ваши покупки</h2>
-      <p>Ваш id: {id}</p>
-     
-      <p>Логин: {login}</p>
-      <div className="MenuBasket">
-        <button onClick={removeToken}>ВЫЙТИ</button>
-       
+      <h1>Корзина</h1>
+
+          <div className='UserName'>
+            <h3>Здравствуйте : {login}</h3>
+            <p> Товаров в корзине: {basketQty}</p>
+            <p>Общая стоимость товаров: {basketPrice}</p>
+           
+      <ShowOrderButton />        <button  onClick={removeToken}>ВЫЙТИ</button>
+
+          </div> 
+          <div className="BasketContent">
+        {basket.map((item) => <ProductBasket key={item.id} id={item.id}
+          image={item.image} header={item.header}
+          price={item.price} setBasket={setBasket}
+          setBasketPrice={setBasketPrice}
+          setBasketQty={setBasketQty} />)}
       </div>
-      <div className="BasketUser">
-        <ProductUser />
-        <ProductUser />
-        <ProductUser />
-        <ProductUser />
-      </div>
+      
     </div>
   );
 }
+ 
+  
+
+    
+
 
 export default Basket;
-
-
-
-
 
 
 

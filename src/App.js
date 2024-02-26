@@ -9,13 +9,20 @@ import Login from './components/Login';
 import Registration from './components/Registration';
 import Cabinet from './views/Cabinet';
 import AddProduct from './components/AddProduct';
-function App() {
 
+function App() {
   const[page, setPage] = useState('Main')
   const[modalBox, setModalBox] = useState('none')
+  const [basket, setBasket] = useState([])
+  const [basketPrice, setBasketPrice] = useState(0)
+  const [basketQty, setBasketQty] = useState(0)
+  const [token, setToken] = useState(localStorage.getItem('token'))
+  const [productData, setProductData,savedData] = useState([null]);
+
+
   const pages = {
-    Main: <Main />,
-    Basket: <Basket />,
+    Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} savedData={savedData} setModalBox={setModalBox} token={token}settoken={setToken}setProductData={setProductData}productData={productData}/>,
+    Basket: <Basket basket={basket} setBasket={setBasket} basketPrice={basketPrice} setBasketPrice={setBasketPrice} basketQty={basketQty} setBasketQty={setBasketQty} setModalBox={setModalBox}settoken={setToken}productData={productData}setProductData={setProductData} />,
      Cabinet:<Cabinet />
   }
 
@@ -30,9 +37,11 @@ function App() {
      <Header setPage={setPage} setModalBox={setModalBox} />
      { pages[page] }
      { modalBoxes[modalBox] }
+   
      <Footer />
     </div>
   );
 }
 
 export default App;
+

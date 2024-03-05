@@ -23,7 +23,7 @@ function App() {
   const pages = {
     Main: <Main setBasket={setBasket} setBasketPrice={setBasketPrice} setBasketQty={setBasketQty} basket={basket} savedData={savedData} setModalBox={setModalBox} token={token}settoken={setToken}setProductData={setProductData}productData={productData}/>,
     Basket: <Basket basket={basket} setBasket={setBasket} basketPrice={basketPrice} setBasketPrice={setBasketPrice} basketQty={basketQty} setBasketQty={setBasketQty} setModalBox={setModalBox}settoken={setToken}productData={productData}setProductData={setProductData} />,
-     Cabinet:<Cabinet />
+     Cabinet:<Cabinet token={token}settoken={setToken} />
   }
 
   const modalBoxes = {

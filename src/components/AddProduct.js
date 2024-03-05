@@ -24,6 +24,9 @@ function AddProduct({ setModalBox, setMessage }) {
     })
       .then((result) => result.json())
       .then((result) =>  console.log(result)) 
+      window.location.reload();
+
+
   }
 
   return (

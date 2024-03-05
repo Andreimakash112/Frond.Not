@@ -4,7 +4,11 @@ import './ModalBox.css';
 function ModalBox({setModalBox, children}) {
   return (
 <>
-    <div className="echo" onClick ={() =>setModalBox('none')}>
+    <div className="echo" onClick ={() =>setModalBox('none')
+
+
+
+}>
     </div>
     <div className="ModalBox">
 

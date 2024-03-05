@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Basket.css';
 import ProductBasket from '../components/ProductBasket';
 import { jwtDecode } from 'jwt-decode'; 
+
 function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, setBasketQty, setModalBox }) {//
  
   const [login, setLogin] = useState('');
@@ -23,14 +24,17 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
     } else {
       alert('Обновите страницу, чтобы выйти.');
       localStorage.removeItem('token');
+      window.location.reload();
+
+
     }
-  }
+  } 
 
 
 
 
 
-  function ShowOrderButton() {
+  function OrderButton() {
     if (basketQty > 0) {
       return (<><button className="order" onClick={() => setModalBox('OrderBox')}>Оформить заказ</button></>)
     }
@@ -45,7 +49,7 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
             <p> Товаров в корзине: {basketQty}</p>
             <p>Общая стоимость товаров: {basketPrice}</p>
            
-      <ShowOrderButton />        <button  onClick={removeToken}>ВЫЙТИ</button>
+      <OrderButton />        <button  onClick={removeToken}>ВЫЙТИ</button>
 
           </div> 
           <div className="BasketContent">

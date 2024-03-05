@@ -24,7 +24,12 @@ function Login() {
     .then(result => result.json())
     .then((result) => {
       console.log(result)
-      localStorage.setItem('token',result.token) //сохранить в localStorage
+      localStorage.setItem('token',result.token) 
+      window.location.reload();
+
+
+
+
     })
  }
   return ( 

@@ -5,6 +5,8 @@ import UserBox from './UserBox';
 function Header({ setPage, setModalBox, token, setToken }) {
   function BasketRequest() {
      const token = localStorage.getItem('token')
+ 
+
     if (token !== null) { console.log('ТОКЕН ЕСТЬ!!!');
       return (
         <>
@@ -27,4 +29,3 @@ function Header({ setPage, setModalBox, token, setToken }) {
 }
    
 export default Header;
-

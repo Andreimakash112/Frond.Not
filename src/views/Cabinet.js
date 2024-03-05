@@ -3,14 +3,22 @@ import './Cabinet.css';
 import { jwtDecode } from 'jwt-decode';
 
 function Cabinet({ token }) {
-    
+  
+            
+          
+          
+          
+        //
     function NewPassword() {
+
         const pass = document.getElementById('pass').value
 
         if (pass.length === 0) {
             document.getElementById('emailMessage').innerText = "Нет связи с сервером!"
             return
-        }
+        }//
+      
+
 
         const data = {
             token: token,
@@ -42,7 +50,7 @@ function Cabinet({ token }) {
         } else {
           
           localStorage.removeItem('token');
-          window.location.reload();
+          window.location.reload();  
     
     
         }

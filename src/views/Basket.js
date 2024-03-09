@@ -34,9 +34,9 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
 
 
 
-  function OrderButton() {
+  function CartBox() {
     if (basketQty > 0) {
-      return (<><button className="order" onClick={() => setModalBox('OrderBox')}>Оформить заказ</button></>)
+      return (<><button className="order" onClick={() => setModalBox('CartBox')}>Оформить заказ</button></>)
     }
   }
 
@@ -49,7 +49,7 @@ function Basket({ basket, setBasket, basketPrice, setBasketPrice, basketQty, set
             <p> Товаров в корзине: {basketQty}</p>
             <p>Общая стоимость товаров: {basketPrice}</p>
            
-      <OrderButton />        <button  onClick={removeToken}>ВЫЙТИ</button>
+      <CartBox />        <button  onClick={removeToken}>ВЫЙТИ</button>
 
           </div> 
           <div className="BasketContent">

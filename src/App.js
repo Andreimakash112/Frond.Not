@@ -9,6 +9,8 @@ import Login from './components/Login';
 import Registration from './components/Registration';
 import Cabinet from './views/Cabinet';
 import AddProduct from './components/AddProduct';
+import CartBox from './components/CartBox';
+
 
 function App() {
   const[page, setPage] = useState('Main')
@@ -30,7 +32,8 @@ function App() {
     none: null,
     login: <ModalBox setModalBox={setModalBox}><Login /></ModalBox>,
     Registration: <ModalBox setModalBox={setModalBox}><Registration /></ModalBox>,
-    AddProduct: <ModalBox setModalBox={setModalBox}><AddProduct /></ModalBox>
+    AddProduct: <ModalBox setModalBox={setModalBox}><AddProduct /></ModalBox>,
+    CartBox: <ModalBox setModalBox={setModalBox}><CartBox setModalBox={setModalBox} setBasket={setBasket} setBasketQty={setBasketQty} setBasketPrice={setBasketPrice} /> </ModalBox>
   }
   return (
     <div className="App">
